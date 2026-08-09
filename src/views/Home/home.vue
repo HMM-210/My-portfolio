@@ -5,17 +5,18 @@
     <img src="/hg.jpg" alt="" />
 
     <header>
-      <a href="#" @click.prevent="scrollTo('#about')" class="abaut">من انا</a>
-      <a href="#" @click.prevent="scrollTo('#skills')" class="skills"
-        >المهارات</a
+      <a href="#" @click.prevent="scrollTo('#contact')" class="contact"
+        >تواصل</a
       >
       <a href="#" @click.prevent="scrollTo('#projects')" class="projects"
         >المشاريع</a
       >
-      <a href="#" @click.prevent="scrollTo('#contact')" class="contact"
-        >تواصل</a
+      <a href="#" @click.prevent="scrollTo('#skills')" class="skills"
+        >المهارات</a
       >
+      <a href="#" @click.prevent="scrollTo('#about')" class="abaut">من انا</a>
     </header>
+
     <div id="about" class="abautbox">
       <h2>من انا؟</h2>
       <p>هل تريد معرفه من انا؟ لست مهتما لان اقول لك</p>
@@ -73,6 +74,7 @@
       <a href="mailto:hassan210mmm@gmail.com">hassan210mmm@gmail.com</a>
       <a href="https://t.me/HMM210_bot" target="_blank">@HMM210_bot</a>
     </div>
+    
     <div class="morespace"></div>
   </div>
 </template>
@@ -102,6 +104,7 @@ a {
   background: radial-gradient(circle, #000000 30%, #05000a 90%);
   animation: fadeBlackfront 1.5s ease 10s forwards;
   z-index: 2;
+  
   .pointone {
     width: 5vw;
     height: 5vw;
@@ -140,13 +143,14 @@ a {
     opacity: 0;
     animation: fadeInRaven 4s ease 8s forwards;
   }
+
   header {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     background-color: #000000aa;
-    height: 5%;
+    height: 6vh;
     display: flex;
     gap: 5%;
     justify-content: center;
@@ -163,6 +167,7 @@ a {
       color: #d0c8b0;
     }
   }
+
   .abautbox {
     position: absolute;
     top: 0; left: 0; right: 0;
@@ -192,137 +197,154 @@ a {
       }
     }
   }
+
   .skillsbox {
     position: absolute;
-    top: 100%;
+    top: 105%;
     left: 0; right: 0;
     margin: 0 auto;
-    padding: 5% 0%;
+    padding: 3% 0;
     height: auto;
     width: 90vw;
-    border-radius: 2%;
+    border-radius: 12px;
     background-color: #1a1a1a;
     opacity: 0;
     animation: dropIn 2s ease 11s forwards;
     text-align: center;
     h2 {
       font-size: 3rem;
-      margin-top: 10%;
+      margin-top: 2%;
     }
     .skill-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 5%;
+      gap: 1.5rem;
       justify-content: center;
-      margin-top: 5%;
+      margin-top: 3%;
       span {
         background: #2a2a2a;
-        padding: 1rem 2rem;
-        margin: 2%;
+        padding: 0.8rem 1.8rem;
         border-radius: 12px;
         font-size: 1.2rem;
         border: 1px solid #3a3a3a;
       }
     }
   }
+
   .projectsbox {
     position: absolute;
-    top: 172%;
+    top: 185%;
     left: 0; right: 0;
     margin: 0 auto;
-    padding: 5% 0%;
+    padding: 3% 0;
     width: 90vw;
     height: auto;
-    border-radius: 2%;
+    border-radius: 12px;
     background-color: #1a1a1a;
     opacity: 0;
     animation: dropIn 2s ease 11s forwards;
     text-align: center;
+    
     h2 {
       font-size: 3rem;
-      margin-top: 5%;
+      margin-top: 2%;
+      margin-bottom: 2rem;
     }
+
     .projects-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
-      margin-top: 3rem;
       padding: 0 2rem;
     }
+
     .project {
       background: #222222;
       border: 1px solid #3a3a3a;
       border-radius: 12px;
-      flex: 1 1 300px; 
-      max-width: 350px;
+      flex: 1 1 280px;
+      max-width: 340px;
       padding: 2rem;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      text-align: right;
+      
       h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
+        color: #fff;
       }
       p {
         font-size: 1rem;
         color: #b0a898;
         margin-bottom: 1.5rem;
+        line-height: 1.6;
       }
       a {
+        align-self: center;
         background: #2a2a2a;
-        padding: 0.8rem 1.2rem;
+        padding: 0.8rem 1.5rem;
         border-radius: 8px;
         border: 1px solid #4a4a4a;
+        color: #c8c0b0;
         transition: 0.3s;
         &:hover {
           background: #3a3a3a;
+          color: #fff;
         }
       }
     }
   }
+
   .contactbox {
     position: absolute;
-    top: 310%;
+    top: 315%;
     left: 0; right: 0;
     margin: 0 auto;
-    padding: 5% 0%;
+    padding: 3% 0;
     height: auto;
     width: 90vw;
-    border-radius: 2%;
+    border-radius: 12px;
     background-color: #1a1a1a;
     opacity: 0;
     animation: dropIn 2s ease 11s forwards;
     text-align: center;
-    margin-bottom: 15vh;
+    
     h2 {
       font-size: 3rem;
-      margin-top: 5%;
+      margin-top: 2%;
+      margin-bottom: 2rem;
     }
+    
     a {
-      display: block;
-      margin: 2%;
+      display: inline-block;
+      margin: 1rem;
       padding: 1rem 2rem;
       background: #2a2a2a;
       border-radius: 12px;
       color: #c8c0b0;
       font-size: 1.2rem;
+      border: 1px solid #3a3a3a;
+      transition: 0.3s;
+      &:hover {
+        background: #3a3a3a;
+        color: #fff;
+      }
     }
   }
+
   .morespace {
     position: absolute;
-    top: 340%;
+    top: 360%;
     left: 0; right: 0;
-    margin: 0 auto;
-    padding: 5% 0%;
-    height: 10vh;
-    margin-bottom: 10vh;
+    height: 15vh;
     width: 90vw;
-    border-radius: 2%;
+    margin: 0 auto;
     opacity: 0;
     animation: dropIn 2s ease 11s forwards;
-    text-align: center;
   }
 }
 
