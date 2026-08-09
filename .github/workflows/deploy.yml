@@ -36,7 +36,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'dist'
-          name: my-vue-pages 
 
       - name: Deploy to GitHub Pages
         id: deployment
