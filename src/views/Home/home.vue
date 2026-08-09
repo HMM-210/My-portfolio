@@ -40,29 +40,31 @@
 
     <div id="projects" class="projectsbox">
       <h2>المشاريع</h2>
-      <div class="project">
-        <h3>Admin-Telegram-Master</h3>
-        <p>
-          بوت تليجرام ذكي يربط المستخدمين بالمطورين بشكل آمن وفوري للتواصل
-          والإبلاغ عن المشاكل.
-        </p>
-        <a href="https://github.com/HMM-210/Telegram-Admin-Bot" target="_blank">عرض المشروع</a>
-      </div>
-      <div class="project">
-        <h3>GymScheduler</h3>
-        <p>
-          بوت يدير التمارين الرياضية. يدخل المستخدم تمارينه ويولد البوت جدولاً
-          نظيفًا وجاهزًا للطباعة.
-        </p>
-        <a href="https://github.com/HMM-210/GymScheduler" target="_blank">عرض المشروع</a>
-      </div>
-      <div class="project">
-        <h3>XOkingdom</h3>
-        <p>
-          لعبة XO كاملة: Go backend + Vue frontend + Q-learning AI + تشفير
-          AES-GCM + 3 مستويات صعوبة.
-        </p>
-        <a href="https://github.com/HMM-210/XOkingdom" target="_blank">عرض المشروع</a>
+      <div class="projects-container">
+        <div class="project">
+          <h3>Admin-Telegram-Master</h3>
+          <p>
+            بوت تليجرام ذكي يربط المستخدمين بالمطورين بشكل آمن وفوري للتواصل
+            والإبلاغ عن المشاكل.
+          </p>
+          <a href="https://github.com/HMM-210/Telegram-Admin-Bot" target="_blank">عرض المشروع</a>
+        </div>
+        <div class="project">
+          <h3>GymScheduler</h3>
+          <p>
+            بوت يدير التمارين الرياضية. يدخل المستخدم تمارينه ويولد البوت جدولاً
+            نظيفًا وجاهزًا للطباعة.
+          </p>
+          <a href="https://github.com/HMM-210/GymScheduler" target="_blank">عرض المشروع</a>
+        </div>
+        <div class="project">
+          <h3>XOkingdom</h3>
+          <p>
+            لعبة XO كاملة: Go backend + Vue frontend + Q-learning AI + تشفير
+            AES-GCM + 3 مستويات صعوبة.
+          </p>
+          <a href="https://github.com/HMM-210/XOkingdom" target="_blank">عرض المشروع</a>
+        </div>
       </div>
     </div>
 
@@ -240,17 +242,43 @@ a {
       font-size: 3rem;
       margin-top: 5%;
     }
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      padding: 0 2rem;
+    }
     .project {
-      margin: 5%;
-      padding: 5%;
-      max-width: 80%;
+      background: #222222;
+      border: 1px solid #3a3a3a;
+      border-radius: 12px;
+      flex: 1 1 300px; 
+      max-width: 350px;
+      padding: 2rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       h3 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin-bottom: 1rem;
       }
       p {
         font-size: 1rem;
         color: #b0a898;
+        margin-bottom: 1.5rem;
+      }
+      a {
+        background: #2a2a2a;
+        padding: 0.8rem 1.2rem;
+        border-radius: 8px;
+        border: 1px solid #4a4a4a;
+        transition: 0.3s;
+        &:hover {
+          background: #3a3a3a;
+        }
       }
     }
   }
