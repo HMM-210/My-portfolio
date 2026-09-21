@@ -1,82 +1,103 @@
 <template>
-  <div class="mainbox">
-    <div class="pointone"></div>
-    <div class="pointtwo"></div>
-    <img src="/hg.jpg" alt="" />
+  <!DOCTYPE html>
+  <html lang="ar">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="mainbox">
+        <div class="pointone"></div>
+        <div class="pointtwo"></div>
+        <img src="/hg.jpg" alt="" />
 
-    <header>
-      <a href="#" @click.prevent="scrollTo('#contact')" class="contact"
-        >تواصل</a
-      >
-      <a href="#" @click.prevent="scrollTo('#projects')" class="projects"
-        >المشاريع</a
-      >
-      <a href="#" @click.prevent="scrollTo('#skills')" class="skills"
-        >المهارات</a
-      >
-      <a href="#" @click.prevent="scrollTo('#about')" class="abaut">من انا</a>
-    </header>
+        <header>
+          <a href="#" @click.prevent="scrollTo('#contact')" class="contact"
+            >تواصل</a
+          >
+          <a href="#" @click.prevent="scrollTo('#projects')" class="projects"
+            >المشاريع</a
+          >
+          <a href="#" @click.prevent="scrollTo('#skills')" class="skills"
+            >المهارات</a
+          >
+          <a href="#" @click.prevent="scrollTo('#about')" class="abaut"
+            >من انا</a
+          >
+        </header>
+        <div class="cards">
+          <div id="about" class="abautbox">
+            <h2>من انا؟</h2>
+            <p>هل تريد معرفه من انا؟ لست مهتما لان اقول لك</p>
+            <p>لكن ساسمح لك بالتسكع بموقعي الشخصي.</p>
+            <div class="bio">
+              <span>HMM_210 :الاسم</span>
+              <span>العمر: ؟؟</span>
+              <span>الجنسية: ؟؟</span>
+            </div>
+          </div>
 
-    <div id="about" class="abautbox">
-      <h2>من انا؟</h2>
-      <p>هل تريد معرفه من انا؟ لست مهتما لان اقول لك</p>
-      <p>.لكن ساسمح لك بالتسكع بموقعي الشخصي</p>
-      <div class="bio">
-        <span>HMM_210 :الاسم</span>
-        <span>العمر: ؟؟</span>
-        <span>الجنسية: ؟؟</span>
-      </div>
-    </div>
+          <div id="skills" class="skillsbox">
+            <h2>المهارات</h2>
+            <div class="skill-list">
+              <span>Go</span>
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>CSS</span>
+              <span>HTML</span>
+            </div>
+          </div>
 
-    <div id="skills" class="skillsbox">
-      <h2>المهارات</h2>
-      <div class="skill-list">
-        <span>Go</span>
-        <span>Python</span>
-        <span>JavaScript</span>
-        <span>CSS</span>
-        <span>HTML</span>
-      </div>
-    </div>
+          <div id="projects" class="projectsbox">
+            <h2>المشاريع</h2>
+            <div class="projects-container">
+              <div class="project">
+                <h3>Admin-Telegram-Master</h3>
+                <p>
+                  بوت تليجرام ذكي يربط المستخدمين بالمطورين بشكل آمن وفوري
+                  للتواصل والإبلاغ عن المشاكل.
+                </p>
+                <a
+                  href="https://github.com/HMM-210/Telegram-Admin-Bot"
+                  target="_blank"
+                  >عرض المشروع</a
+                >
+              </div>
+              <div class="project">
+                <h3>GymScheduler</h3>
+                <p>
+                  بوت يدير التمارين الرياضية. يدخل المستخدم تمارينه ويولد البوت
+                  جدولاً نظيفًا وجاهزًا للطباعة.
+                </p>
+                <a
+                  href="https://github.com/HMM-210/GymScheduler"
+                  target="_blank"
+                  >عرض المشروع</a
+                >
+              </div>
+              <div class="project">
+                <h3>XOkingdom</h3>
+                <p>
+                  لعبة XO كاملة: Go backend + Vue frontend + Q-learning AI +
+                  تشفير AES-GCM + ثلاثة مستويات صعوبة.
+                </p>
+                <a href="https://github.com/HMM-210/XOkingdom" target="_blank"
+                  >عرض المشروع</a
+                >
+              </div>
+            </div>
+          </div>
 
-    <div id="projects" class="projectsbox">
-      <h2>المشاريع</h2>
-      <div class="projects-container">
-        <div class="project">
-          <h3>Admin-Telegram-Master</h3>
-          <p>
-            بوت تليجرام ذكي يربط المستخدمين بالمطورين بشكل آمن وفوري للتواصل
-            والإبلاغ عن المشاكل.
-          </p>
-          <a href="https://github.com/HMM-210/Telegram-Admin-Bot" target="_blank">عرض المشروع</a>
+          <div id="contact" class="contactbox">
+            <h2>تواصل</h2>
+            <a href="mailto:hassan210mmm@gmail.com">hassan210mmm@gmail.com</a>
+            <a href="https://t.me/HMM210_bot" target="_blank">@HMM210_bot</a>
+          </div>
         </div>
-        <div class="project">
-          <h3>GymScheduler</h3>
-          <p>
-            بوت يدير التمارين الرياضية. يدخل المستخدم تمارينه ويولد البوت جدولاً
-            نظيفًا وجاهزًا للطباعة.
-          </p>
-          <a href="https://github.com/HMM-210/GymScheduler" target="_blank">عرض المشروع</a>
-        </div>
-        <div class="project">
-          <h3>XOkingdom</h3>
-          <p>
-            لعبة XO كاملة: Go backend + Vue frontend + Q-learning AI + تشفير
-            AES-GCM + 3 مستويات صعوبة.
-          </p>
-          <a href="https://github.com/HMM-210/XOkingdom" target="_blank">عرض المشروع</a>
-        </div>
       </div>
-    </div>
-
-    <div id="contact" class="contactbox">
-      <h2>تواصل</h2>
-      <a href="mailto:hassan210mmm@gmail.com">hassan210mmm@gmail.com</a>
-      <a href="https://t.me/HMM210_bot" target="_blank">@HMM210_bot</a>
-    </div>
-    
-    <div class="morespace"></div>
-  </div>
+    </body>
+  </html>
 </template>
 
 <style scoped lang="scss">
@@ -91,6 +112,9 @@ html {
 a {
   text-decoration: none;
 }
+p {
+  direction: rtl;
+}
 
 .mainbox {
   width: 100vw;
@@ -102,9 +126,9 @@ a {
   top: 0;
   left: 0;
   background: radial-gradient(circle, #000000 30%, #05000a 90%);
-  animation: fadeBlackfront 1.5s ease 10s forwards;
+  animation: fadeBlackfront 1s ease 4.5s forwards;
   z-index: 2;
-  
+
   .pointone {
     width: 5vw;
     height: 5vw;
@@ -116,7 +140,15 @@ a {
     background-color: rgba(26, 58, 106);
     filter: blur(15px);
     z-index: 3;
-    animation: fadeInGlow 10s forwards ease-in-out;
+    animation: fadeInGlow 4.5s forwards ease-in-out;
+
+    /* إذا كان الطول أكبر من العرض (الشاشات الطولية) */
+    @media (orientation: portrait) {
+      width: 5vh;
+      height: 5vh;
+      left: calc(50% + 7.5vh);
+      filter: blur(10px);
+    }
   }
 
   .pointtwo {
@@ -130,7 +162,15 @@ a {
     filter: blur(15px);
     background-color: rgba(26, 58, 106);
     z-index: 3;
-    animation: fadeInGlow 10s forwards ease-in-out;
+    animation: fadeInGlow 4.5s forwards ease-in-out;
+
+    /* إذا كان الطول أكبر من العرض (الشاشات الطولية) */
+    @media (orientation: portrait) {
+      width: 5vh;
+      height: 5vh;
+      left: calc(50% - 12.5vh);
+      filter: blur(10px);
+    }
   }
 
   img {
@@ -141,14 +181,14 @@ a {
     transform: translate(-50%, -50%);
     z-index: 1;
     opacity: 0;
-    animation: fadeInRaven 4s ease 8s forwards;
+    animation: fadeInRaven 2s ease 3.5s forwards;
   }
 
   header {
     position: fixed;
     top: 0;
-    right: 0;
-    width: 100%;
+    left: 0;
+    width: 97.8%;
     background-color: #000000aa;
     height: 6vh;
     display: flex;
@@ -157,7 +197,7 @@ a {
     align-items: center;
     z-index: 5;
     opacity: 0;
-    animation: dropIn 2s ease 11s forwards;
+    animation: dropIn 1.2s ease 5s forwards;
     a {
       font-size: 0.9rem;
       color: #7a7265;
@@ -168,21 +208,29 @@ a {
     }
   }
 
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    margin: 5%;
+  }
+
   .abautbox {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    margin: 30vh auto 0;
-    width: fit-content;
     text-align: center;
-    animation: dropIn 2s ease 11s forwards;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 15vh;
+    animation: dropIn 1.2s ease 5s forwards;
+    height: 85vh;
     h2 {
       font-size: 4rem;
       opacity: 0;
-      animation: dropIn 2s ease 11s forwards;
+      animation: dropIn 1.2s ease 5s forwards;
     }
     p {
       opacity: 0;
-      animation: dropIn 2s ease 11s forwards;
+      animation: dropIn 1.2s ease 5s forwards;
     }
     .bio {
       margin-top: 2rem;
@@ -190,7 +238,7 @@ a {
       flex-direction: column;
       gap: 5%;
       opacity: 0;
-      animation: dropIn 2s ease 11s forwards;
+      animation: dropIn 1.2s ease 5s forwards;
       span {
         font-size: 1rem;
         color: #b0a898;
@@ -199,17 +247,17 @@ a {
   }
 
   .skillsbox {
-    position: absolute;
-    top: 105%;
-    left: 0; right: 0;
-    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin: 5% 0%;
     padding: 3% 0;
     height: auto;
     width: 90vw;
     border-radius: 12px;
     background-color: #1a1a1a;
     opacity: 0;
-    animation: dropIn 2s ease 11s forwards;
+    animation: dropIn 1.2s ease 5s forwards;
     text-align: center;
     h2 {
       font-size: 3rem;
@@ -232,19 +280,19 @@ a {
   }
 
   .projectsbox {
-    position: absolute;
-    top: 185%;
-    left: 0; right: 0;
-    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin: 5% 0%;
     padding: 3% 0;
     width: 90vw;
     height: auto;
     border-radius: 12px;
     background-color: #1a1a1a;
     opacity: 0;
-    animation: dropIn 2s ease 11s forwards;
+    animation: dropIn 1.2s ease 5s forwards;
     text-align: center;
-    
+
     h2 {
       font-size: 3rem;
       margin-top: 2%;
@@ -264,15 +312,16 @@ a {
       border: 1px solid #3a3a3a;
       border-radius: 12px;
       flex: 1 1 280px;
-      max-width: 340px;
+      max-width: 370px;
       padding: 2rem;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       text-align: right;
-      
+
       h3 {
+        text-align: center;
         font-size: 1.5rem;
         margin-bottom: 1rem;
         color: #fff;
@@ -282,6 +331,9 @@ a {
         color: #b0a898;
         margin-bottom: 1.5rem;
         line-height: 1.6;
+        direction: rtl;
+        text-align: right;
+        unicode-bidi: isolate;
       }
       a {
         align-self: center;
@@ -300,25 +352,25 @@ a {
   }
 
   .contactbox {
-    position: absolute;
-    top: 315%;
-    left: 0; right: 0;
-    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin: 5% 0%;
     padding: 3% 0;
     height: auto;
     width: 90vw;
     border-radius: 12px;
     background-color: #1a1a1a;
     opacity: 0;
-    animation: dropIn 2s ease 11s forwards;
+    animation: dropIn 1.2s ease 5s forwards;
     text-align: center;
-    
+
     h2 {
       font-size: 3rem;
       margin-top: 2%;
       margin-bottom: 2rem;
     }
-    
+
     a {
       display: inline-block;
       margin: 1rem;
@@ -334,17 +386,6 @@ a {
         color: #fff;
       }
     }
-  }
-
-  .morespace {
-    position: absolute;
-    top: 360%;
-    left: 0; right: 0;
-    height: 15vh;
-    width: 90vw;
-    margin: 0 auto;
-    opacity: 0;
-    animation: dropIn 2s ease 11s forwards;
   }
 }
 
