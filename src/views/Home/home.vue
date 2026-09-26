@@ -1,5 +1,5 @@
 <template>
-      <div class="mainbox">
+      <div class="mainbox" :class="{ 'is-scrolling': isScrolling }" @scroll="handleScroll">
         <div class="pointone"></div>
         <div class="pointtwo"></div>
         <img src="/hg.jpg" alt="" />
@@ -112,21 +112,27 @@ p {
   position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
-scrollbar-color: #333333 #000000;
-  scrollbar-width: thin;
-
   &::-webkit-scrollbar {
-    width: 8px;
-    background-color: #000000;
+    width: 14px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #333333;
-    border-radius: 4px;
+    background-color: transparent; 
+    border-radius: 8px;
+    transition: background-color 0.4s ease;
   }
 
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: #555555; 
+  &.is-scrolling::-webkit-scrollbar-thumb {
+    background-color: #333333;
+  }
+
+  &.is-scrolling::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
   }
 
   &::-webkit-scrollbar-button {
@@ -450,6 +456,21 @@ scrollbar-color: #333333 #000000;
 </style>
 
 <script setup>
+import { ref } from 'vue';
+
+const isScrolling = ref(false);
+let scrollTimeout = null;
+
+function handleScroll() {
+  isScrolling.value = true;
+
+  if (scrollTimeout) clearTimeout(scrollTimeout);
+
+  scrollTimeout = setTimeout(() => {
+    isScrolling.value = false;
+  }, 1200); 
+}
+
 function scrollTo(id) {
   const el = document.querySelector(id);
   if (el) el.scrollIntoView({ behavior: "smooth" });
