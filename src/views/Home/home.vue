@@ -112,7 +112,26 @@ p {
   position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
+scrollbar-color: #333333 #000000;
+  scrollbar-width: thin;
 
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #000000;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #333333;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555555; 
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
   top: 0;
   left: 0;
   background: radial-gradient(circle, #000000 30%, #05000a 90%);
