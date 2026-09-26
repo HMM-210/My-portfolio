@@ -1,6 +1,6 @@
 <template>
-      <div class="mainbox" :class="{ 'is-scrolling': isScrolling }" @scroll="handleScroll">
-        <div class="pointone"></div>
+      <div class="mainbox" :class="{ 'is-scrolling': isScrolling }" @scroll="handleScroll" @mousemove="handleMouseMove">
+      <div class="pointone"></div>
         <div class="pointtwo"></div>
         <img src="/hg.jpg" alt="" />
 
@@ -131,8 +131,12 @@ p {
     background-color: #333333;
   }
 
-  &.is-scrolling::-webkit-scrollbar-thumb:hover {
+  &::-webkit-scrollbar-thumb:hover {
     background-color: #555555;
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background-color: #777777; 
   }
 
   &::-webkit-scrollbar-button {
@@ -157,7 +161,6 @@ p {
     z-index: 3;
     animation: fadeInGlow 4.5s forwards ease-in-out;
 
-    /* إذا كان الطول أكبر من العرض (الشاشات الطولية) */
     @media (orientation: portrait) {
       width: 5vh;
       height: 5vh;
@@ -179,7 +182,6 @@ p {
     z-index: 3;
     animation: fadeInGlow 4.5s forwards ease-in-out;
 
-    /* إذا كان الطول أكبر من العرض (الشاشات الطولية) */
     @media (orientation: portrait) {
       width: 5vh;
       height: 5vh;
@@ -463,12 +465,26 @@ let scrollTimeout = null;
 
 function handleScroll() {
   isScrolling.value = true;
-
   if (scrollTimeout) clearTimeout(scrollTimeout);
 
   scrollTimeout = setTimeout(() => {
     isScrolling.value = false;
+    scrollTimeout = null;
   }, 1200); 
+}
+
+function handleMouseMove(e) {
+  if (window.innerWidth - e.clientX <= 24) {
+    isScrolling.value = true;
+    if (scrollTimeout) clearTimeout(scrollTimeout);
+    scrollTimeout = null; 
+  } 
+  else if (isScrolling.value && scrollTimeout === null) {
+    scrollTimeout = setTimeout(() => {
+      isScrolling.value = false;
+      scrollTimeout = null;
+    }, 1200);
+  }
 }
 
 function scrollTo(id) {
