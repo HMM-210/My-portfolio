@@ -96,6 +96,7 @@
           <div id="contact" class="contactbox">
             <h2>تواصل</h2>
             <a href="mailto:hassan210mmm@gmail.com">hassan210mmm@gmail.com</a>
+            <a href="https://github.com/HMM-210" target="_blank">GitHub</a>
             <a href="https://t.me/HMM210_bot" target="_blank">@HMM210_bot</a>
           </div>
         </div>
