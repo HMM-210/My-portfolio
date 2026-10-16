@@ -69,7 +69,7 @@
                   >عرض المشروع</a
                 >
               </div>
-              <div class="project">
+                            <div class="project">
                 <h3>XOkingdom</h3>
                 <p>
                   لعبة XO كاملة: Go backend + Vue frontend + Q-learning AI +
@@ -78,13 +78,17 @@
                 <a href="https://github.com/HMM-210/XOkingdom" target="_blank"
                   >عرض المشروع</a
                 >
-                <div class="project">
-                    <h3>Nisaba OCR</h3>
-                    <p>
-                      نظام OCR عربي محلي بالكامل بلا إنترنت: 6 مراحل متتالية (Tesseract ← PaddleOCR عربي ← Qari-OCR VLM) مع توازٍ يعتمد على RAM المتاح، CER = 11.09% على ISI-PPT متفوقاً على GPT-4o-mini.
-                    </p>
-                    <a href="https://github.com/HMM-210/Nisaba-OCR" target="_blank">عرض المشروع</a>
-                  </div>
+              </div>
+              <div class="project">
+                <h3>Nisaba OCR</h3>
+                <p>
+                  نظام OCR عربي محلي بالكامل بلا إنترنت: 6 مراحل متتالية
+                  (Tesseract ← PaddleOCR عربي ← Qari-OCR VLM) مع توازٍ يعتمد على
+                  RAM المتاح، CER = 11.09% على ISI-PPT متفوقاً على GPT-4o-mini.
+                </p>
+                <a href="https://github.com/HMM-210/Nisaba-OCR" target="_blank"
+                  >عرض المشروع</a
+                >
               </div>
             </div>
           </div>
